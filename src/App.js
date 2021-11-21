@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CountBarchart from "./components/topic-analysis/barchart/CountBarchart";
+import GHLNavbar from "./common/GHLNavbar";
+import CountPerServiceChart from "./components/topic-analysis/per-service/CountPerServiceChart";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+
+            <GHLNavbar/>
+            <div className="container-fluid">
+                <div className="row">
+                    <CountBarchart/>
+                    <CountPerServiceChart/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
