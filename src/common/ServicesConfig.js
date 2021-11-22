@@ -1,5 +1,5 @@
 const serviceUrls = {
-    recommenderSystem: "http://34.219.158.176:5001/",
+    recommenderSystem: "http://34.217.82.213:5001/",
     topicAnalysis: "",
     clv: ""
 }
