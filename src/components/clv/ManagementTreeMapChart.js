@@ -30,11 +30,9 @@ export default class OperationsTreeMapChart extends React.Component {
 
     render() {
         var data = this.state.content;
-        var h = this.state.hotel;
         if (data === undefined || data.length === 0 ) {
             return <p/>;
         }
-        // TODO: Send real data
         return <div>
                     <div>
                         <select value={this.state.value} onChange={this.handleChange}>
