@@ -9,7 +9,7 @@ export default class CountBarchart extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://192.168.10.10:5001/topic/count/barchart`)
+        axios.get(`http://192.168.10.13:5001/topic/count/barchart`)
             .then(res => {
                 const content = res.data;
                 this.setState({content});

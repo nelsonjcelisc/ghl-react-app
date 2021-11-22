@@ -1,5 +1,9 @@
 import React from 'react';
 import ManagementTreeMap from "../clv/ManagementTreeMapChart";
+import GuaranteeBarChart from "../topic-analysis/barchart/GuaranteeBarChart";
+import GuaranteePerServiceChart from "../topic-analysis/per-service/GuaranteePerServiceChart";
+import CountBarchart from "../topic-analysis/barchart/CountBarchart";
+import CountPerServiceChart from "../topic-analysis/per-service/CountPerServiceChart";
 
 export default class Management extends React.Component {
 
@@ -7,6 +11,12 @@ export default class Management extends React.Component {
         return <div className="container">
             <div className="row">
                 <h3>Análisis de tópicos</h3>
+                <h4>Quejas con compensación</h4>
+                <GuaranteeBarChart/>
+                <GuaranteePerServiceChart/>
+                <h4>Quejas con respuesta formal</h4>
+                <CountBarchart/>
+                <CountPerServiceChart/>
             </div>
             <hr/>
             <div className="row">
