@@ -8,7 +8,7 @@ var parseTimeDS = d3.timeParse("%Y-%m-%d");
 /* http://54.191.81.61:5001/dashboard 
 * 
 /solicitudes/data/datasolicitudescompleto.csv*/
-d3.csv("http://54.191.81.61:5001/dashboard").then(function(data){
+d3.csv("http://34.217.82.213:5001/dashboard").then(function(data){
     category = "area";
 
     data.map(function(d){
