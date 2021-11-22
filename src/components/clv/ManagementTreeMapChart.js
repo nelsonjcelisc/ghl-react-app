@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import TreeMapChart from "./TreeMapChart";
+import serviceUrls from "../../common/ServicesConfig";
 
 export default class OperationsTreeMapChart extends React.Component {
     state = {
@@ -9,7 +10,7 @@ export default class OperationsTreeMapChart extends React.Component {
 
 
     handleChange = (event) => {
-        axios.get("http://ec2-18-224-7-158.us-east-2.compute.amazonaws.com:5002/rfm/groups/data?hotel=" + event.target.value)
+        axios.get(serviceUrls.clv + "rfm/groups/data?hotel=" + event.target.value)
             .then(res => {
                 const cont = res.data;
                 this.setState({
@@ -19,7 +20,7 @@ export default class OperationsTreeMapChart extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("http://ec2-18-224-7-158.us-east-2.compute.amazonaws.com:5002/rfm/groups/data?hotel=GHL")
+        axios.get(serviceUrls.clv +"rfm/groups/data?hotel=GHL")
             .then(res => {
                 const cont = res.data;
                 this.setState({
