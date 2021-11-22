@@ -11,8 +11,7 @@ export default class OperationsClv extends React.Component {
     }
     
     componentDidMount() {
-        // http://ec2-18-224-7-158.us-east-2.compute.amazonaws.com:5002/clv/client/data?client=0x75AF4A2FB5CFCF126516796FB59B145D
-        axios.get("http://ec2-18-224-7-158.us-east-2.compute.amazonaws.com:5002/clv/client/data?client=" + this.props.userId )
+        axios.get(serviceUrls.clv + "clv/client/data?client=" + this.props.userId )
             .then(res => {
                 const cont = res.data;
                 this.setState({
@@ -20,7 +19,7 @@ export default class OperationsClv extends React.Component {
                     content_clv: cont,
                 });
             });
-        axios.get("http://ec2-18-224-7-158.us-east-2.compute.amazonaws.com:5002/rfm/client/data?client=" + this.props.userId )
+        axios.get(serviceUrls.clv + "rfm/client/data?client=" + this.props.userId )
         .then(res => {
             const cont = res.data;
             this.setState({

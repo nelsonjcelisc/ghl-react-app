@@ -81,6 +81,7 @@ StackedAreaChart.prototype.wrangleData = function(dataTimeFiltered){
                 "Deficientes": 0,
                 "Cerrada No Realizadas": 0,
                 "Abierta": 0
+
             })
         });
     vis.updateVis();
@@ -160,4 +161,6 @@ StackedAreaChart.prototype.addLegend = function(){
         .attr("y", 10)
         .attr("text-anchor", "start")
         .text(d => { return d.label; }); 
+
 }
+

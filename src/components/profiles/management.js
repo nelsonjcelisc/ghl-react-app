@@ -25,7 +25,7 @@ export default class Management extends React.Component {
             </div>
             <hr/>
             <div className="row">
-                Sistema de recomendacion
+                Análisis de solicitudes: <a href="/solicitudes" target="_blank">Ir a dashboard solicitudes</a>
             </div>
         </div>
     }
