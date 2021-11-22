@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Dashboard de solicitudes - GHL Hoteles</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.jtif"></a>
+        </div>
+    </nav>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div id="left-charts" class="col-sm-12 col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Dates: <span id="dateLabel1">01/01/2017</span> - <span id="dateLabel2">10/12/2017</span></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <select id="var-select" class="form-control">
+                            <option selected value="Todos">Todos</option>
+                            <option value="Hotel 2">Hotel 2</option>
+                            <option value="Hotel 12">Hotel 12</option>
+                            <option value="Hotel 254">Hotel 254</option>
+                            <option value="Hotel 392">Hotel 392</option>
+                            <option value="Hotel 3">Hotel 3</option>
+                            <option value="Hotel 547">Hotel 547</option>
+                            <option value="Hotel 315">Hotel 315</option>
+                            <option value="Hotel 252">Hotel 252</option>
+                            <option value="Hotel 67">Hotel 67</option>
+                            <option value="Hotel 597">Hotel 597</option>
+                            <option value="Hotel 2176">Hotel 2176</option>
+                            <option value="Hotel 515">Hotel 515</option>
+                            <option value="Hotel 531">Hotel 531</option>
+                            <option value="Hotel 10">Hotel 10</option>
+                            <option value="Hotel 8">Hotel 8</option>
+                            <option value="Hotel 393">Hotel 393</option>
+                            <option value="Hotel 644">Hotel 644</option>
+                            <option value="Hotel 592">Hotel 592</option>
+                            <option value="Hotel 2284">Hotel 2284</option>
+                            <option value="Hotel 2199">Hotel 2199</option>
+                            <option value="Hotel 7">Hotel 7</option>
+                            <option value="Hotel 549">Hotel 549</option>
+                            <option value="Hotel 367">Hotel 367</option>
+                            <option value="Hotel 2292">Hotel 2292</option>
+                            <option value="Hotel 2320">Hotel 2320</option>
+                            <option value="Hotel 2241">Hotel 2241</option>
+                            <option value="Hotel 631">Hotel 631</option>
+                            <option value="Hotel 548">Hotel 548</option>
+                            <option value="Hotel 5">Hotel 5</option>
+                            <option value="Hotel 611">Hotel 611</option>
+                            <option value="Hotel 6">Hotel 6</option>
+                            <option value="Hotel 380">Hotel 380</option>
+                            <option value="Hotel 620">Hotel 620</option>
+                            <option value="Hotel 615">Hotel 615</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="timeline"></div>
+                <div id="stacked-area"></div>
+                <div id="revenue"></div>
+            </div>
+            <div id="right-charts" class="col-md-4 col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-12" id="company-size"></div>
+                    <div class="col-sm-6 col-md-12" id="units-sold"></div>
+                    <div class="col-sm-6 col-md-12" id="call-duration"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- External JS Libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/d3.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/stackedAreaChart.js"></script>
+<script src="js/barChart.js"></script>
+<script src="js/donutChart.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
