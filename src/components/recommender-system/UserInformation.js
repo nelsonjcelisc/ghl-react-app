@@ -4,7 +4,7 @@ import axios from 'axios';
 import {Badge} from "reactstrap";
 import serviceUrls from "../../common/ServicesConfig";
 
-export default class UserData extends React.Component {
+export default class UserInformation extends React.Component {
     state = {
         content: []
     }

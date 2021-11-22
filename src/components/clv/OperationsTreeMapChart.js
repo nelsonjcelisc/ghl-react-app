@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import TreeMapChart from "./TreeMapChart";
+import serviceUrls from "../../common/ServicesConfig";
 
 export default class OperationsTreeMapChart extends React.Component {
     state = {
@@ -8,8 +9,7 @@ export default class OperationsTreeMapChart extends React.Component {
     }
 
     componentDidMount() {
-        //TODO fix url
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
+        axios.get("http://ec2-18-224-7-158.us-east-2.compute.amazonaws.com:5002/rfm/groups/data?hotel=GHL")
             .then(res => {
                 const content = res.data;
                 this.setState({content});
@@ -17,51 +17,11 @@ export default class OperationsTreeMapChart extends React.Component {
     }
 
     render() {
-        var x = {
-            "labels": [
-                "Hotel  67",
-                "About To Sleep",
-                "At Risk",
-                "Cannot Lose Them",
-                "Champions",
-                "Hibernating customers",
-                "Lost customers",
-                "Loyal",
-                "Need Attention",
-                "New Customers",
-                "Potential Loyalist",
-                "Promising"
-            ],
-            "parents": [
-                "",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67",
-                "Hotel  67"
-            ],
-            "values": [
-                449291,
-                31271,
-                9029,
-                74421,
-                1019,
-                51146,
-                30791,
-                2425,
-                10615,
-                69679,
-                23941,
-                144954
-            ]
+        var data = this.state.content;
+        if (data === undefined || data.length === 0 ) {
+            return <p/>;
         }
         // TODO: Send real data
-        return TreeMapChart({parents: x["parents"], labels: x["labels"], values: x["values"]})
+        return TreeMapChart({parents: data["parents"], labels: data["labels"], values: data["values"]})
     }
 }
