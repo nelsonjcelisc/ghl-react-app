@@ -45,7 +45,9 @@ StackedAreaChart.prototype.initVis = function(){
     vis.stack = d3.stack()
         .keys(["Eficiente",
         "Estandard",
-        "Deficiente"]);
+        "Deficientes",
+        "Cerrada No Realizadas",
+        "Abierta"]);
 
     vis.area = d3.area()
         .x(function(d) { return vis.x(parseTime(d.data.date)); })
@@ -76,7 +78,9 @@ StackedAreaChart.prototype.wrangleData = function(dataTimeFiltered){
             }, {
                 "Eficiente": 0,
                 "Estandard": 0,
-                "Deficiente": 0
+                "Deficientes": 0,
+                "Cerrada No Realizadas": 0,
+                "Abierta": 0
             })
         });
     vis.updateVis();
@@ -128,9 +132,11 @@ StackedAreaChart.prototype.addLegend = function(){
                     ", " + (-25) + ")");
 
     var legendArray = [
-        {label: "Deficiente", color: vis.color("Deficiente")},
+        {label: "Deficientes", color: vis.color("Deficientes")},
 		{label: "Estandard", color: vis.color("Estandard")},
-		{label: "Eficiente", color: vis.color("Eficiente")}
+		{label: "Eficiente", color: vis.color("Eficiente")},
+        {label: "No Realizadas", color: vis.color("Cerrada No Realizadas")},
+        {label: "Abierta", color: vis.color("Abierta")}
     ]
 
     var legendCol = legend.selectAll(".legendCol")
@@ -138,7 +144,7 @@ StackedAreaChart.prototype.addLegend = function(){
         .enter().append("g")
             .attr("class", "legendCol")
             .attr("transform", (d, i) => {
-                return "translate(" + (i * 150) + ", " + (0) + ")"
+                return "translate(" + (i * 120) + ", " + (0) + ")"
             });
         
     legendCol.append("rect")
