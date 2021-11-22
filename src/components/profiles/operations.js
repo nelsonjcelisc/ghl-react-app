@@ -13,9 +13,11 @@ export default class Operations extends React.Component {
         return <div className="container">
             <UserInformation userId={userId}/>
             <StaysInformation userId={userId}/>
+            <h3>Servicios usados</h3>
             <PreviousRequests userId={userId}/>
+            <h3>Servicios recomendados</h3>
             <Recommendations userId={userId}/>
-            <OperationsClv userId={userId_}/>
+            <OperationsTreeMapChart userId={userId}/>_}/>
         </div>
     }
 }
