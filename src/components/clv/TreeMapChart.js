@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Plot from "react-plotly.js/react-plotly";
 
 export default function TreeMapChart(props) {
@@ -14,7 +14,7 @@ export default function TreeMapChart(props) {
         labels: labels,
         values: values,
         textinfo: "label+value+text",
-        text: values.map(v => ((v * 100) / values[0]).toFixed(2) + "% del total" ),
+        text: values.map(v => ((v * 100) / values[0]).toFixed(2) + "% del total"),
         textposition: "middle center",
         textfont: {size: 20, color: "white"},
         tiling: {packing: "squarify"}

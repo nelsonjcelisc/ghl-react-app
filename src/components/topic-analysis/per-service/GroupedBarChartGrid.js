@@ -1,5 +1,5 @@
 import Plot from "react-plotly.js/react-plotly";
-import React, {Fragment} from "react";
+import React from "react";
 
 export default function GroupedBarChartGrid(props) {
     if (props.data.length === 0) {
